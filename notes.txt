@@ -1,0 +1,37 @@
+
+```
+[ERROR] Error: You cannot deploy from this branch (gh-pages).
+You will need to checkout to a different branch!
+    at Command.deploy (C:\Users\JustinSobieski\Documents\GitHub\Fishbone-Aquatics.github.io\node_modules\@docusaurus\core\lib\commands\deploy.js:124:15)
+    at async Promise.all (index 0)
+    at async runCLI (C:\Users\JustinSobieski\Documents\GitHub\Fishbone-Aquatics.github.io\node_modules\@docusaurus\core\lib\commands\cli.js:56:5)
+    at async file:///C:/Users/JustinSobieski/Documents/GitHub/Fishbone-Aquatics.github.io/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3
+[INFO] Docusaurus version: 3.7.0
+```
+
+The issue is that you are currently on the gh-pages branch, and Docusaurus does not allow deploying from the branch it is deploying to.
+
+
+Run the following in PowerShell:
+`git checkout main`
+and then deploy:
+`$env:GIT_USER="Fishbone-Aquatics"; $env:DEPLOYMENT_BRANCH="gh-pages"; npm run deploy`
+
+
+
+YOU MUST BUILD AND DEPLOY FOR EACH CHANGE AS GITHUB PAGES DOES NOT AUTOMATICALLY REBUILD THE STATIC SITE.
+LONG VERSION:
+git add .
+git commit -m "Updated docs"
+git push origin main
+npm run build
+npm run deploy
+
+
+SHORT VERSION:
+npm run build
+npm run deploy
+
+
+
+TODO: swap to github actions for automated deployments and workflow.
