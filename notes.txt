@@ -34,4 +34,9 @@ npm run deploy
 
 
 
-TODO: swap to github actions for automated deployments and workflow.
+TODO: 
+learn how to set perm local env variable noob
+$env:GIT_USER="Fishbone-Aquatics"; $env:DEPLOYMENT_BRANCH="gh-pages"; npm run deploy
+
+
+swap to github actions for automated deployments and workflow

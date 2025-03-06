@@ -3,9 +3,9 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Fishbone Aquatics',
+  title: 'The Shrimp Tank',
   tagline: 'Your Source for Aquatic Knowledge',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/shrimp_favicon.ico',
 
   // Set the production URL of your site
   url: 'https://Fishbone-Aquatics.github.io',
@@ -34,17 +34,6 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Fishbone-Aquatics/Fishbone-Aquatics.github.io/tree/main/docs/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/Fishbone-Aquatics/Fishbone-Aquatics.github.io/tree/main/blog/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -55,19 +44,18 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Fishbone Aquatics',
+      title: 'Home',
       logo: {
         alt: 'Fishbone Aquatics Logo',
-        src: 'img/logo.svg',
+        src: 'img/caridina_shrimp.svg',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'F.A.Q.',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/Fishbone-Aquatics/Fishbone-Aquatics.github.io',
           label: 'GitHub',

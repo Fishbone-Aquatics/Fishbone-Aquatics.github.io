@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title='Home' // example of how to reuse siteConfig title ane extend it if you wanted to, i "home"
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
